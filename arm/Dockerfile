@@ -11,3 +11,5 @@ ENV ANDROID_IMAGES_ARM_FILTER   sys-img-armeabi-v7a-android-21,sys-img-armeabi-v
 # Update Android SDK packages
 RUN (echo y | android update sdk --all --force --no-ui --filter ${ANDROID_IMAGES_ARM_FILTER})
 
+# add gradle package
+ADD https://services.gradle.org/distributions/gradle-4.4-all.zip  /home/jenkins/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/
