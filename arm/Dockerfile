@@ -6,6 +6,9 @@ USER root
 ADD https://services.gradle.org/distributions/gradle-4.4-all.zip  /home/jenkins/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/
 RUN chmod 777 -R /home/jenkins/.gradle/
 
+# install cloc tool
+RUN apt-get update && apt-get -y install cloc
+
 # Switch to user
 USER jenkins
 WORKDIR $HOME/workdir
